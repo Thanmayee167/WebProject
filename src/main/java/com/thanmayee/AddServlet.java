@@ -6,6 +6,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 	private static final long serialVersionUID = -5544861121298990712L;
@@ -15,7 +16,10 @@ public class AddServlet extends HttpServlet {
 		int i= Integer.parseInt(req.getParameter("num1"));
 		int j= Integer.parseInt(req.getParameter("num2"));
 		
-		res.sendRedirect("square?num="+ (i+j));
+		HttpSession httpSession = req.getSession();
+		httpSession.setAttribute("num", (i+j));
+		
+		res.sendRedirect("square");
 	}
 
 }
