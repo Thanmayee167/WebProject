@@ -3,11 +3,13 @@ package com.thanmayee;
 import java.io.IOException;
 
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+@WebServlet("/add")
 public class AddServlet extends HttpServlet {
 	private static final long serialVersionUID = -5544861121298990712L;
 
