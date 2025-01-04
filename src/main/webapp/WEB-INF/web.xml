@@ -1,19 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
-  <servlet>
-  	<servlet-name>"Adding numbers"</servlet-name>
-  	<servlet-class>com.thanmayee.AddServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>"Adding numbers"</servlet-name>
-  	<url-pattern>/add</url-pattern>
-  </servlet-mapping>
-  <servlet>
-  	<servlet-name>"square the number"</servlet-name>
-  	<servlet-class>com.thanmayee.SquareServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  	<servlet-name>"square the number"</servlet-name>
-  	<url-pattern>/square</url-pattern>
-  </servlet-mapping>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+	id="WebApp_ID" version="6.0">
+	<servlet>
+		<servlet-name>"Adding numbers"</servlet-name>
+		<servlet-class>com.thanmayee.AddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"Adding numbers"</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>"square the number"</servlet-name>
+		<servlet-class>com.thanmayee.SquareServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"square the number"</servlet-name>
+		<url-pattern>/square</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>"Display Name"</servlet-name>
+		<servlet-class>com.thanmayee.NameServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"Display Name"</servlet-name>
+		<url-pattern>/name</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>"Display Nick name"</servlet-name>
+		<servlet-class>com.thanmayee.NickNameServlet</servlet-class>
+		<init-param>
+			<param-name>name</param-name>
+			<param-value>Dummy</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>"Display Nick name"</servlet-name>
+		<url-pattern>/nickName</url-pattern>
+	</servlet-mapping>
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Bukkittu Sai Thanmayee</param-value>
+	</context-param>
 </web-app>
